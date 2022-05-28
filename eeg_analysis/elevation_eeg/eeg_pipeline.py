@@ -13,7 +13,7 @@ subj_name = 'Paul'
 raw = mne.io.read_raw_brainvision(eeg_DIR / str(subj_name + '_1.vhdr'), preload=True)
 
 # load channel name mapping and rename channels
-with open('channel_mapping.pkl', 'rb') as f:
+with open('../../data/mappings/channel_mapping.pkl', 'rb') as f:
     mapping = pickle.load(f)
 raw.rename_channels(mapping)
 
